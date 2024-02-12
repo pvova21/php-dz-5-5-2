@@ -12,6 +12,10 @@ class ComposerStaticInitb7670d90fa803400168312d1b096854c
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Tests\\' => 6,
+        ),
         'P' => 
         array (
             'PhpParser\\' => 10,
@@ -24,6 +28,10 @@ class ComposerStaticInitb7670d90fa803400168312d1b096854c
     );
 
     public static $prefixDirsPsr4 = array (
+        'Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -36,6 +44,10 @@ class ComposerStaticInitb7670d90fa803400168312d1b096854c
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/classes/src',
     );
 
     public static $classMap = array (
@@ -675,6 +687,7 @@ class ComposerStaticInitb7670d90fa803400168312d1b096854c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb7670d90fa803400168312d1b096854c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb7670d90fa803400168312d1b096854c::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitb7670d90fa803400168312d1b096854c::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInitb7670d90fa803400168312d1b096854c::$classMap;
 
         }, null, ClassLoader::class);

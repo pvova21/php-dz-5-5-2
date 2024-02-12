@@ -2,7 +2,7 @@
 
 class UsersTableWrapper implements TableWrapperInterface
 {
-    private array $rows;
+    private array $rows = [];
 
     public function insert(array $values): void
     {
